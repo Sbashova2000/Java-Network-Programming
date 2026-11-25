@@ -1,0 +1,152 @@
+🔵 другите
+.msg-row.other {
+  background: #1f2937;        /* тъмно сиво */
+  color: #e5e7eb;
+  align-self: flex-start;
+}
+
+
+#log, #privateLog {
+  display: flex;
+  flex-direction: column;
+}
+
+/* общ bubble */
+.msg-row {
+  position: relative;
+  max-width: 75%;
+  margin: 8px 0;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+/* другите (ляво) */
+.msg-row.other {
+  background: #1f2937;
+  color: #e5e7eb;
+  align-self: flex-start;
+}
+
+/* твоите (дясно) */
+.msg-row.me {
+  background: #dbeafe;
+  color: #0b2545;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+/* bubble tail – твоите */
+.msg-row.me::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  bottom: 10px;
+  width: 12px;
+  height: 12px;
+  background: #dbeafe;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+/* bubble tail – другите */
+.msg-row.other::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  bottom: 10px;
+  width: 12px;
+  height: 12px;
+  background: #1f2937;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+/* username */
+.msg-user {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+/* timestamp */
+.msg-time {
+  display: block;
+  font-size: 10px;
+  opacity: 0.6;
+  text-align: right;
+  margin-top: 4px;
+}
+
+/* system messages */
+.msg-system {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.7;
+  margin: 10px 0;
+}
+
+.dropdown {
+  position: relative;
+  flex: 1;
+}
+
+.dropbtn {
+  width: 100%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.dropdown-content.open {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.dropdown-item.active {
+  font-weight: 700;
+  background: #eef2ff;
+}
+
+.row.equal-buttons .dropdown {
+  flex: 1;
+}
+
+
+.row.equal-buttons > * {
+  flex: 1;
+  min-width: 0;
+}
+
+.row.equal-buttons button,
+.row.equal-buttons .dropbtn {
+  height: 42px;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.dropdown {
+  position: relative;
+}
